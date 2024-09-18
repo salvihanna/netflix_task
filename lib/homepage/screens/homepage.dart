@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:netflix/firstcontainer.dart';
+import 'package:netflix/homepage/screens/bottomnav.dart';
+import 'package:netflix/homepage/screens/firstcontainer.dart';
 import 'package:netflix/homepage/screens/widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -35,6 +36,7 @@ class HomePage extends StatelessWidget {
               height: 250, 
               child: UpcomingList(),
             ),
+            BottomNav()
           ],
         ),
       ),
