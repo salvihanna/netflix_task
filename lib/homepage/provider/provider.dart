@@ -28,3 +28,5 @@ final movieProvidernew = FutureProvider<List<Movie>>((ref) async {
        throw Exception('Failed to load movies');
      }
    });
+
+   
