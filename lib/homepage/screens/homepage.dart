@@ -17,11 +17,20 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             FirstContainer(),
-            Text('Popular'),
+            SizedBox(height: 50,),
+            Text('Popular',
+            style: TextStyle(
+              fontWeight: FontWeight.bold
+            ),),
             SizedBox(
-              height: 400, 
+              height: 250, 
               child: MovieListScreen(),
-            )
+            ),
+            //SizedBox(height: 10,),
+            Text('Upcoming',
+            style: TextStyle(
+              fontWeight: FontWeight.bold
+            ),),
           ],
         ),
       ),
