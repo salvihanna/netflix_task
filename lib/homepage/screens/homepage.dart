@@ -31,6 +31,10 @@ class HomePage extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold
             ),),
+            SizedBox(
+              height: 250, 
+              child: UpcomingList(),
+            ),
           ],
         ),
       ),

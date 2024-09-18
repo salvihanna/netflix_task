@@ -8,4 +8,11 @@ final dioProvider = Provider<Dio>((ref) {
   ));
 });
 
+final dioProvidernew = Provider<Dio>((ref) {
+  return Dio(BaseOptions(
+    baseUrl: 'https://api.themoviedb.org/3/movie/upcoming',
+    queryParameters: {'api_key': '71d368cd5ef3e91680c52686cc513612'}, 
+  ));
+});
+
 
