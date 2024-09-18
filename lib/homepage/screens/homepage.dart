@@ -12,31 +12,55 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.black,
         centerTitle: true,
-        title: Image.asset('assets/logo.png',height: 85,),
+        title: Image.asset(
+          'assets/logo.png',
+          height: 85,
+        ),
       ),
       body: const SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start, 
           children: [
             FirstContainer(),
-            SizedBox(height: 50,),
-            Text('Popular',
-            style: TextStyle(
-              fontWeight: FontWeight.bold
-            ),),
+            SizedBox(height: 20),
+            
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0), 
+              child: Text(
+                'Popular',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15, 
+                ),
+              ),
+            ),
+            SizedBox(height: 10), 
             SizedBox(
-              height: 200, 
+              height: 180, 
               child: MovieListScreen(),
             ),
-            //SizedBox(height: 10,),
-            Text('Upcoming',
-            style: TextStyle(
-              fontWeight: FontWeight.bold
-            ),),
+            
+            SizedBox(height: 3), 
+
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8.0), 
+              child: Text(
+                'Upcoming',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            SizedBox(height: 10), 
             SizedBox(
-              height: 250, 
+              height: 180, 
               child: UpcomingList(),
             ),
-            BottomNav()
+
+            SizedBox(height: 6), 
+            
+            BottomNav(), 
           ],
         ),
       ),

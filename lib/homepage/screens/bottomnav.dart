@@ -35,6 +35,7 @@ class BottomNav extends ConsumerWidget {
       ],
       selectedItemColor: Colors.red,  
       unselectedItemColor: Colors.grey,
+       backgroundColor: Color.fromRGBO(0, 0, 0, 0),
     );
   }
 }

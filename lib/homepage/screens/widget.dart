@@ -20,8 +20,8 @@ class MovieListScreen extends ConsumerWidget {
             itemBuilder: (context, index) {
               final movie = movies[index];
               return Container(
-                width: 150,
-                margin: const EdgeInsets.all(8.0),
+                width: 130,
+                margin: const EdgeInsets.all(0.1),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -39,7 +39,7 @@ class MovieListScreen extends ConsumerWidget {
                           'https://image.tmdb.org/t/p/w500${movie.posterPath}',
                           fit: BoxFit.cover,
                           width: 120,
-                          height: 120, // Circular size
+                          height: 120, 
                         ),
                       ),
                     ),
@@ -86,38 +86,16 @@ class UpcomingList extends ConsumerWidget {
             itemBuilder: (context, index) {
               final movie = movies[index];
               return Container(
-                width: 150, 
-                margin: const EdgeInsets.all(8.0),
+                width: 130, 
+                margin: const EdgeInsets.all(0.1),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center, 
                   children: [
                     Image.network(
                       'https://image.tmdb.org/t/p/w500${movie.posterPath}', 
                       fit: BoxFit.cover,
-                      width: 120, // Same width
-                      height: 120, // Same height
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      movie.title,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      textAlign: TextAlign.center, 
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      'Release Date: ${movie.releaseDate}',
-                      style: const TextStyle(
-                        color: Colors.grey,
-                        fontSize: 10,
-                      ),
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
+                      width: 120, 
+                      height: 160, 
                     ),
                   ],
                 ),
