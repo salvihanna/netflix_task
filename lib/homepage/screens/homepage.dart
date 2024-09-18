@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
               fontWeight: FontWeight.bold
             ),),
             SizedBox(
-              height: 250, 
+              height: 200, 
               child: MovieListScreen(),
             ),
             //SizedBox(height: 10,),

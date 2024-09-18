@@ -6,7 +6,7 @@ import 'package:netflix/homepage/model/model.dart';
 final movieProvider = FutureProvider<List<Movie>>((ref) async {
      final dio = ref.watch(dioProvider);
      try {
-       final response = await dio.get('https://api.themoviedb.org/3/movie/popular'); // Popular movies endpoint
+       final response = await dio.get('https://api.themoviedb.org/3/movie/popular'); 
        List<Movie> movies = (response.data['results'] as List)
            .map((movie) => Movie.fromJson(movie))
            .toList();

@@ -18,16 +18,18 @@ class MovieListScreen extends ConsumerWidget {
           itemBuilder: (context, index) {
             final movie = movies[index];
             return Container(
-              width: 120, // Fixed width for each movie item
+              width: 120, 
               margin: const EdgeInsets.all(8.0),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center, 
                 children: [
-                  Image.network(
-                    'https://image.tmdb.org/t/p/w500${movie.posterPath}', // TMDB image base URL
-                    fit: BoxFit.cover,
-                    width: 100,
-                    height: 150,
+                  ClipOval(
+                    child: Image.network(
+                      'https://image.tmdb.org/t/p/w500${movie.posterPath}', 
+                      fit: BoxFit.cover,
+                      width: 100,
+                      height: 100, // Circular size
+                    ),
                   ),
                   const SizedBox(height: 8),
                   Text(
@@ -39,6 +41,7 @@ class MovieListScreen extends ConsumerWidget {
                     ),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 2,
+                    textAlign: TextAlign.center, 
                   ),
                 ],
               ),
@@ -53,6 +56,7 @@ class MovieListScreen extends ConsumerWidget {
 }
 
 
+
 class UpcomingList extends ConsumerWidget {
   const UpcomingList({super.key});
 
@@ -62,23 +66,23 @@ class UpcomingList extends ConsumerWidget {
 
     return movieAsyncValuenew.when(
       data: (movies) => SizedBox(
-        height: 200, 
+        height: 250, 
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: movies.length,
           itemBuilder: (context, index) {
             final movie = movies[index];
             return Container(
-              width: 120, // Fixed width for each movie item
+              width: 150, 
               margin: const EdgeInsets.all(8.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Image.network(
-                    'https://image.tmdb.org/t/p/w500${movie.posterPath}', // TMDB image base URL
+                    'https://image.tmdb.org/t/p/w500${movie.posterPath}', 
                     fit: BoxFit.cover,
                     width: 100,
-                    height: 150,
+                    height: 100, 
                   ),
                   const SizedBox(height: 8),
                   Text(
@@ -90,6 +94,16 @@ class UpcomingList extends ConsumerWidget {
                     ),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 2,
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    'Release Date: ${movie.releaseDate}',
+                    style: const TextStyle(
+                      color: Colors.grey,
+                      fontSize: 10,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ],
               ),
