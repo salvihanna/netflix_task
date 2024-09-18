@@ -19,31 +19,28 @@ class HomePage extends StatelessWidget {
       ),
       body: const SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start, 
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             FirstContainer(),
             SizedBox(height: 20),
-            
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10.0), 
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
               child: Text(
                 'Popular',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 15, 
+                  fontSize: 15,
                 ),
               ),
             ),
-            SizedBox(height: 10), 
+            SizedBox(height: 10),
             SizedBox(
-              height: 180, 
+              height: 180,
               child: MovieListScreen(),
             ),
-            
-            SizedBox(height: 3), 
-
+            SizedBox(height: 3),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8.0), 
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
               child: Text(
                 'Upcoming',
                 style: TextStyle(
@@ -52,15 +49,13 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10), 
+            SizedBox(height: 10),
             SizedBox(
-              height: 180, 
+              height: 180,
               child: UpcomingList(),
             ),
-
-            SizedBox(height: 6), 
-            
-            BottomNav(), 
+            SizedBox(height: 6),
+            BottomNav(),
           ],
         ),
       ),
