@@ -7,16 +7,16 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.transparent,
-      elevation: 0, // Remove the shadow under the AppBar
-      leadingWidth: 60, // Increase the width to accommodate a larger logo
+      elevation: 0, 
+      leadingWidth: 60, 
       leading: Padding(
         padding: const EdgeInsets.all(8.0),
         child: SizedBox(
-          height: 250, // Set desired height
-          width: 250, // Set desired width
+          height: 250, 
+          width: 250, 
           child: Image.asset(
             'assets/nlogo.png',
-            fit: BoxFit.contain, // Ensure it scales to fit the given box
+            fit: BoxFit.contain, 
           ),
         ),
       ),
@@ -33,5 +33,5 @@ class CustomAppBar extends StatelessWidget {
     );
   }
 
-  // Adjusted size to match larger logo
+  
 }
