@@ -42,7 +42,7 @@ class FirstContainer extends StatelessWidget {
             ),
           ),
           const Positioned(
-            bottom: 60,
+            bottom: 75,
             left: 0,
             right: 0,
             child: Padding(
@@ -55,7 +55,7 @@ class FirstContainer extends StatelessWidget {
                     height: 20,
                     width: 20,
                   ),
-                  SizedBox(width: 5),
+                  SizedBox(width: 10),
                   // Text
                   Text(
                     '#5 in Movies Today',
