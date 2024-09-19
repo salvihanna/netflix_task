@@ -8,26 +8,26 @@ class FirstContainer extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.0), // Curved edges
+        borderRadius: BorderRadius.circular(20.0), 
         border: Border.all(
-          color: Colors.white.withOpacity(0.3), // Light white border
+          color: Colors.white.withOpacity(0.3), 
           width: 1.5,
         ),
       ),
       child: Stack(
         children: [
-          // Background image that fits the container
+          
           ClipRRect(
             borderRadius: BorderRadius.circular(20.0),
             child: Image.asset(
-              'assets/aay.jpg', // Replace with your image asset
+              'assets/aay.jpg', 
               height: 450,
-              width: double.infinity, // Make the image take full width
-              fit: BoxFit.cover, // Ensures the image fits the container
+              width: double.infinity, 
+              fit: BoxFit.cover, 
             ),
           ),
 
-          // Gradient overlay starting from the middle and going dark at the bottom
+          
           Positioned.fill(
             child: Container(
               decoration: BoxDecoration(
@@ -37,23 +37,23 @@ class FirstContainer extends StatelessWidget {
                   end: Alignment.bottomCenter,
                   colors: [
                     Colors.transparent,
-                    Color(0xff314347), // Dark color at the bottom
+                    Color(0xff314347), 
                   ],
-                  stops: [-0.1, 1.0], // Gradient starts from the middle
+                  stops: [-0.1, 1.0], 
                 ),
               ),
             ),
           ),
 
-          // Bottom text '#5 in Movies Today' above the buttons
-          Positioned(
-            bottom: 70, // Place the text above the buttons
+          
+          const Positioned(
+            bottom: 70, 
             left: 0,
             right: 0,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: const Text(
-                '#5 in Movies Today', // Replace with actual text
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              child: Text(
+                '#5 in Movies Today', 
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,
@@ -64,7 +64,7 @@ class FirstContainer extends StatelessWidget {
             ),
           ),
 
-          // Bottom-left Play button
+         
           Positioned(
             bottom: 10,
             left: 10,
@@ -72,7 +72,7 @@ class FirstContainer extends StatelessWidget {
               onPressed: () {},
               style: ElevatedButton.styleFrom(
                 backgroundColor:
-                    Colors.white, // White background for Play button
+                    Colors.white, 
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),
@@ -96,7 +96,7 @@ class FirstContainer extends StatelessWidget {
               onPressed: () {},
               style: OutlinedButton.styleFrom(
                 side: const BorderSide(
-                  color: Colors.white, // White border for My List button
+                  color: Colors.white, 
                 ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),
