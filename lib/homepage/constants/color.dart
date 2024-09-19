@@ -14,4 +14,5 @@ class ColorsPallet {
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
+  
 }
