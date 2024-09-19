@@ -10,7 +10,7 @@ class FirstContainer extends StatelessWidget {
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage(
-            'assets/jessicaimg.jpeg', // Path to your asset image
+            'assets/jessicaimg.jpeg', 
           ),
           fit: BoxFit.cover,
         ),
@@ -21,7 +21,7 @@ class FirstContainer extends StatelessWidget {
                     top: 5,
                     //left: 5,
                     child: Image.asset(
-                      'assets/logo.png', // Netflix logo URL
+                      'assets/logo.png', 
                       height: 90,
                      
                     ),
@@ -35,7 +35,7 @@ class FirstContainer extends StatelessWidget {
                         backgroundColor: const Color.fromARGB(255, 238, 16, 0),
                         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                         shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.zero, // This makes the button rectangular
+                                borderRadius: BorderRadius.zero, 
                       ),
                       ),
                       child: const Text(
