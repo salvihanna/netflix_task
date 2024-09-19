@@ -18,12 +18,15 @@ class HomePage extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
-               CustomAppBar(),
+              const CustomAppBar(),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
+                    const SizedBox(
+                      width: 20,
+                    ),
                     TextButton(
                       onPressed: () {},
                       style: ButtonStyle(
@@ -46,6 +49,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
+                    const SizedBox(width: 20,),
                     TextButton(
                       onPressed: () {},
                       style: ButtonStyle(
@@ -68,6 +72,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
+                    const SizedBox(width: 20,),
                     TextButton(
                       onPressed: () {},
                       style: ButtonStyle(
