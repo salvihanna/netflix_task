@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
-              const Appbar(),
+               CustomAppBar(),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: Row(
@@ -27,7 +27,8 @@ class HomePage extends StatelessWidget {
                     TextButton(
                       onPressed: () {},
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.transparent),
                         shape: MaterialStateProperty.all(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0),
@@ -45,11 +46,11 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    
                     TextButton(
                       onPressed: () {},
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.transparent),
                         shape: MaterialStateProperty.all(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0),
@@ -70,7 +71,8 @@ class HomePage extends StatelessWidget {
                     TextButton(
                       onPressed: () {},
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.transparent),
                         shape: MaterialStateProperty.all(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0),
