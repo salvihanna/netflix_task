@@ -55,10 +55,10 @@ class HomePage extends StatelessWidget {
               child: UpcomingList(),
             ),
             SizedBox(height: 6),
-            BottomNav(),
           ],
         ),
       ),
+      bottomNavigationBar: const BottomNav(),  
     );
   }
 }
