@@ -1,18 +1,9 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+//import 'package:get/get.dart';
 
-final dioProvider = Provider<Dio>((ref) {
-  return Dio(BaseOptions(
-    baseUrl: 'https://api.themoviedb.org/3/movie/popular',
-    queryParameters: {'api_key': '71d368cd5ef3e91680c52686cc513612'}, 
+class Api {
+  static final Dio dio = Dio(BaseOptions(
+    baseUrl: 'https://api.themoviedb.org/3/movie/',
+    queryParameters: {'api_key': '71d368cd5ef3e91680c52686cc513612'},
   ));
-});
-
-final dioProvidernew = Provider<Dio>((ref) {
-  return Dio(BaseOptions(
-    baseUrl: 'https://api.themoviedb.org/3/movie/upcoming',
-    queryParameters: {'api_key': '71d368cd5ef3e91680c52686cc513612'}, 
-  ));
-});
-
-
+}

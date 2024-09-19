@@ -10,6 +10,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
+
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
@@ -24,75 +26,28 @@ class HomePage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    const SizedBox(
-                      width: 20,
-                    ),
+                    const SizedBox(width: 20),
                     TextButton(
                       onPressed: () {},
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.transparent),
-                        shape: MaterialStateProperty.all(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                            side: const BorderSide(
-                              color: Colors.white,
-                              width: 1.0,
-                            ),
-                          ),
-                        ),
-                      ),
                       child: const Text(
                         'TV Shows',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
+                        style: TextStyle(color: Colors.white),
                       ),
                     ),
-                    const SizedBox(width: 20,),
+                    const SizedBox(width: 20),
                     TextButton(
                       onPressed: () {},
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.transparent),
-                        shape: MaterialStateProperty.all(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                            side: const BorderSide(
-                              color: Colors.white,
-                              width: 1.0,
-                            ),
-                          ),
-                        ),
-                      ),
                       child: const Text(
                         'Movies',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
+                        style: TextStyle(color: Colors.white),
                       ),
                     ),
-                    const SizedBox(width: 20,),
+                    const SizedBox(width: 20),
                     TextButton(
                       onPressed: () {},
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(Colors.transparent),
-                        shape: MaterialStateProperty.all(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                            side: const BorderSide(
-                              color: Colors.white,
-                              width: 1.0,
-                            ),
-                          ),
-                        ),
-                      ),
                       child: const Text(
                         'Categories',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
+                        style: TextStyle(color: Colors.white),
                       ),
                     ),
                   ],
