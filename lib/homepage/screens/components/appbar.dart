@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix/homepage/constants/color.dart';
+//import 'package:netflix/homepage/constants/color.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
