@@ -7,7 +7,7 @@ class BottomNav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final BottomNavController bottomNavController = Get.find();
+    final BottomNavController bottomNavController = Get.put(BottomNavController() );
 
     return Obx(
       () => BottomNavigationBar(
