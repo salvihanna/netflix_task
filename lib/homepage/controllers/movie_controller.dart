@@ -10,6 +10,7 @@ class MovieController extends GetxController {
   final Dio dio = Dio(BaseOptions(
     baseUrl: 'https://api.themoviedb.org/3/movie/',
     queryParameters: {'api_key': '71d368cd5ef3e91680c52686cc513612'},
+    
   ));
 
   @override
@@ -27,12 +28,10 @@ class MovieController extends GetxController {
             .map((movie) => Movie.fromJson(movie))
             .toList();
       } else {
-        throw Exception(
-            'Failed to load popular movies. Status code: ${response.statusCode}');
+        throw Exception('Failed to load popular movies. Status code: ${response.statusCode}');
       }
     } catch (e) {
       print('Error loading popular movies: $e');
-      // Optionally, show an error message on the UI
     } finally {
       isLoading.value = false;
     }
@@ -46,12 +45,10 @@ class MovieController extends GetxController {
             .map((movie) => Movie.fromJson(movie))
             .toList();
       } else {
-        throw Exception(
-            'Failed to load upcoming movies. Status code: ${response.statusCode}');
+        throw Exception('Failed to load upcoming movies. Status code: ${response.statusCode}');
       }
     } catch (e) {
       print('Error loading upcoming movies: $e');
-      // Optionally, show an error message on the UI
     }
   }
 }
