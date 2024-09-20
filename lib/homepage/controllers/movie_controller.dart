@@ -22,11 +22,17 @@ class MovieController extends GetxController {
   void fetchMovies() async {
     try {
       final response = await dio.get('popular');
-      movies.value = (response.data['results'] as List)
-          .map((movie) => Movie.fromJson(movie))
-          .toList();
+      if (response.statusCode == 200) {
+        movies.value = (response.data['results'] as List)
+            .map((movie) => Movie.fromJson(movie))
+            .toList();
+      } else {
+        throw Exception(
+            'Failed to load popular movies. Status code: ${response.statusCode}');
+      }
     } catch (e) {
-      throw Exception('Failed to load movies');
+      print('Error loading popular movies: $e');
+      // Optionally, show an error message on the UI
     } finally {
       isLoading.value = false;
     }
@@ -35,11 +41,17 @@ class MovieController extends GetxController {
   void fetchUpcomingMovies() async {
     try {
       final response = await dio.get('upcoming');
-      upcomingMovies.value = (response.data['results'] as List)
-          .map((movie) => Movie.fromJson(movie))
-          .toList();
+      if (response.statusCode == 200) {
+        upcomingMovies.value = (response.data['results'] as List)
+            .map((movie) => Movie.fromJson(movie))
+            .toList();
+      } else {
+        throw Exception(
+            'Failed to load upcoming movies. Status code: ${response.statusCode}');
+      }
     } catch (e) {
-      throw Exception('Failed to load upcoming movies');
+      print('Error loading upcoming movies: $e');
+      // Optionally, show an error message on the UI
     }
   }
 }
